@@ -34,6 +34,29 @@
         prettyPrint();
       })
     </script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      // hide #back-top first
+      $("#back-top").hide();
+      // fade in #back-top
+      $(function () {
+        $(window).scroll(function () {
+          if ($(this).scrollTop() > 100) {
+            $('#back-top').fadeIn();
+          } else {
+            $('#back-top').fadeOut();
+          }
+        });
+        // scroll body to 0px on click
+        $('#back-top a').click(function () {
+          $('body,html').animate({
+            scrollTop: 0
+          }, 800);
+          return false;
+        });
+      });
+    });
+    </script>
 
     <!-- atom & rss feed -->
     <link href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
@@ -42,7 +65,7 @@
   </head>
 
   <body>
-    <div class="navbar navbar-static-top navbar-fixed-top">
+    <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container-narrow">
           <a class="brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
@@ -73,7 +96,7 @@
     <p id="back-top">
       <a href="#top"><span></span>Back to Top</a>
     </p>
-    <script type="text/javascript" src="{{ ASSET_PATH }}/js/backtop.js"></script>
+    
     {% include JB/analytics %}
   </body>
 </html>
