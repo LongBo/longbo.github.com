@@ -76,7 +76,7 @@ Back to top button
 #back-top {
   position: fixed;
   bottom: 30px;
-  right:30px;
+  right:10%;
   /*margin-left: -150px;*/
 }
 #back-top a {
