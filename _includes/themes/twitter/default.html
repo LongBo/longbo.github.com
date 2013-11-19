@@ -25,6 +25,15 @@
     <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
   -->
+    <link href="{{ ASSET_PATH }}/css/prettify_desert.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <script type="text/javascript" src="{{ ASSET_PATH }}/js/jquery.1.9.0.min.js"></script>
+    <script type="text/javascript" src="{{ ASSET_PATH }}/js/code/prettify.js"></script>
+    <script type="text/javascript">
+      $(window).load(function(){
+        $("pre").addClass("prettyprint");
+        prettyPrint();
+      })
+    </script>
 
     <!-- atom & rss feed -->
     <link href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
