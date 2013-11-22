@@ -1,6 +1,6 @@
 ---
 layout: post
-category : lessons
+category : PHP
 tagline: "The Second tagline"
 tags : [jekyll,Second]
 ---
