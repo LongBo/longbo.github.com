@@ -8,14 +8,14 @@ tagline: My blog is here
 
 ##Welcome 
     
-    This : My Blog =)
+    This is : My Blog =)
     
     My information :
-      name : Long Bo
-      email : longbo0820@gmail.com
+      name : LongBo
+      eMail : longbo0820(@)gmail.com
       github : LongBo
-      twitter : @lunbor
-      sina weibo: (http://weibo.com/lunbor)
+      sinaWeibo: (http://weibo.com/lunbor)
+      
 
 
 Here's a my "posts list".
@@ -28,4 +28,4 @@ Here's a my "posts list".
 
 ## To-Do
 
-Git Bash支持中文，SmartGit滚一边去
+@做真正重要的事，关心真正重要的人
