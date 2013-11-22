@@ -15,7 +15,7 @@ tagline: My blog is here
       email : longbo0820@gmail.com
       github : LongBo
       twitter : @lunbor
-      sina weibo: [@龙三皮](http://weibo.com/lunbor)
+      sina weibo: (http://weibo.com/lunbor)
 
 
 Here's a my "posts list".
