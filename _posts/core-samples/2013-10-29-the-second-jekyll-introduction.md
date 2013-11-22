@@ -1,6 +1,6 @@
 ---
 layout: post
-category : PHP
+category : php
 tagline: "The Second tagline"
 tags : [jekyll,Second]
 ---
