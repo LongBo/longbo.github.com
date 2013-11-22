@@ -28,4 +28,4 @@ Here's a my "posts list".
 
 ## To-Do
 
-Git Bash支持中文，SmartGit滚一边去。
+Git Bash支持中文，SmartGit滚一边去
