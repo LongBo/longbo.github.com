@@ -28,3 +28,5 @@ Here's a my "posts list".
 
 ## To-Do
 
+支持中文吧。
+
