@@ -27,3 +27,4 @@ Here's a my "posts list".
 </ul>
 
 ## To-Do
+做重要的事，关心重要的人
