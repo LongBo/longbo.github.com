@@ -6,7 +6,7 @@ tagline: My blog is here
 {% include JB/setup %}
 
 
-#Welcome 
+##Welcome 
     
     This : My Blog =)
     
