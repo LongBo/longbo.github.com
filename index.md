@@ -1,36 +1,24 @@
 ---
 layout: page
 title: Hello World!
-tagline: Supporting tagline
+tagline: My blog is here
 ---
 {% include JB/setup %}
 
-Read [Jekyll Quick Start](http://jekyllbootstrap.com/usage/jekyll-quick-start.html)
 
-Complete usage and documentation available at: [Jekyll Bootstrap](http://jekyllbootstrap.com)
-
-## Update Author Attributes
-
-In `_config.yml` remember to specify your own data:
+#Welcome 
     
-    title : My Blog =)
+    This : My Blog =)
     
-    author :
-      name : Name Lastname
-      email : blah@email.test
-      github : username
-      twitter : username
+    My information :
+      name : Long Bo
+      email : longbo0820@gmail.com
+      github : LongBo
+      twitter : @lunbor
+      sina weibo: [http://weibo.com/lunbor](http://weibo.com/lunbor)
 
-The theme should reference these variables whenever needed.
-    
-## Sample Posts
 
-This blog contains sample posts which help stage pages and blog data.
-When you don't need the samples anymore just delete the `_posts/core-samples` folder.
-
-    $ rm -rf _posts/core-samples
-
-Here's a sample "posts list".
+Here's a my "posts list".
 
 <ul class="posts">
   {% for post in site.posts %}
@@ -39,8 +27,4 @@ Here's a sample "posts list".
 </ul>
 
 ## To-Do
-
-This theme is still unfinished. If you'd like to be added as a contributor, [please fork](http://github.com/plusjade/jekyll-bootstrap)!
-We need to clean up the themes, make theme usage guides with theme-specific markup examples.
-
 
