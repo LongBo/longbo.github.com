@@ -27,5 +27,3 @@ Here's a my "posts list".
 </ul>
 
 ## To-Do
-
-@do something important , care somebody important 
