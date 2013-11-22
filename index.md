@@ -28,4 +28,4 @@ Here's a my "posts list".
 
 ## To-Do
 
-@yes,做真正重要的事,关心真正重要的人
+do something important,care somebody important 
