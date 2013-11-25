@@ -17,10 +17,3 @@ tags : [php]
 
   }
 
-#### 函数命名
-使用__小驼峰法__命名，即第一个单词首字母小写，其余单词首字母均大写；
-  
-  public function __construct($downloadPath = '') {
-
-  }
-
