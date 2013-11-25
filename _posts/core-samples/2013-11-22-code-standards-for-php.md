@@ -11,14 +11,13 @@ tags : [php]
 
 ## 命名规范
 #### 类命名
-使用__大驼峰法__命名，即每个单词的首字母均大写；
+使用__大驼峰法__命名，即每个单词的首字母均大写:
+		class SimpleDB {
 
-  class SimpleDB {
-
-  }
+		}
 
 #### 函数命名
 使用__小驼峰法__命名，即第一个单词首字母小写，其余单词首字母均大写；
-  
+		public function __construct($downloadPath = '') {
 
-
+		}
