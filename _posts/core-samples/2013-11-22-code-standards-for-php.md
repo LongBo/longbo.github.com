@@ -14,7 +14,7 @@ tags : [php]
 使用__大驼峰法__命名，即每个单词的首字母均大写:
 		
         class SimpleDB {
-
+            $aboutVar = 'str'; 
 		}
 
 #### 函数命名
