@@ -2,55 +2,53 @@
 layout: post
 category : php
 tagline: "写了个简易DB封装"
-tags : [php] [mysql]
+tags : [php,mysql]
 ---
 {% include JB/setup %}
 
 =============
 
 
-使用PDO连接数据库
+## 使用PDO连接数据库
+## https://github.com/LongBo/BoboDB
+## 封装示例：
 
+    $selector = [
+        'table' => [ 'tablename1 t1'],
+        'cols' => [ 'id', 'username'],
+        'join' => ['left', 'table2 t2'],
+        'on' => 't2.uid = t1.id',
+        'where' => 'id = :id', 
+        'order' => 'id desc', 
+        'group' => 'user', 
+        'limit' => '0, 20'
+        ];
+    $result = $db->getAll($selector, [':id' => $id]);
 
-https://github.com/LongBo/BoboDB
-封装示例：
-<pre>
-$selector = [
-    'table' => [ 'tablename1 t1'],
-    'cols' => [ 'id', 'username'],
-    'join' => ['left', 'table2 t2'],
-    'on' => 't2.uid = t1.id',
-    'where' => 'id = :id', 
-    'order' => 'id desc', 
-    'group' => 'user', 
-    'limit' => '0, 20'
-    ];
-$result = $db->getAll($selector, [':id' => $id]);
+    $inserter = [
+        'table' => 'table',
+        'cols' => [ 'id', 'username'],
+        'value' => [['id1', 'name1'],['id2', 'name2']]
+        ];
+    $db->insert($insertor, [':id' => $id], $ignore = true);
 
-$inserter = [
-    'table' => 'table',
-    'cols' => [ 'id', 'username'],
-    'value' => [['id1', 'name1'],['id2', 'name2']]
-    ];
-$db->insert($insertor, [':id' => $id], $ignore = true);
+    $replacer = [
+        'table' => 'table',
+        'cols' => [ 'id', 'username'],
+        'value' => [['id1', 'name1'],['id2', 'name2']]
+        ];
+    $db->insert($replacer, [':id' => $id]);
 
-$replacer = [
-    'table' => 'table',
-    'cols' => [ 'id', 'username'],
-    'value' => [['id1', 'name1'],['id2', 'name2']]
-    ];
-$db->insert($replacer, [':id' => $id]);
+    $updater = [
+        'table' => 'table',
+        'update' => [ 'id'=>':id', 'username' => ':username'],
+        'where' => 'id=:id',
+        ];
+    $db->update($updater, [':id' => $id]);
 
-$updater = [
-    'table' => 'table',
-    'update' => [ 'id'=>':id', 'username' => ':username'],
-    'where' => 'id=:id',
-    ];
-$db->update($updater, [':id' => $id]);
+    $deleter = [
+        'table' => 'table',
+        'where' => 'id=:id',
+        ];
+    $db->delete($deleter, [':id' => $id]);
 
-$deleter = [
-    'table' => 'table',
-    'where' => 'id=:id',
-    ];
-$db->delete($deleter, [':id' => $id]);
-</pre>
