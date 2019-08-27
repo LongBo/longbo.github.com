@@ -1,25 +1,56 @@
 ---
 layout: post
 category : php
-tagline: "php常用编码规范"
-tags : [php]
+tagline: "写了个简易DB封装"
+tags : [php] [mysql]
 ---
 {% include JB/setup %}
 
-##编码规范
-文件编码统一为：__UTF-8__，请开发人员调整开发编辑器的编码为UTF-8，并关闭UTF-8 BOM功能，请不要使用windows自带的记事本编辑项目文件。
+=============
 
-## 命名规范
-#### 类命名
-使用__大驼峰法__命名，即每个单词的首字母均大写:
-		
-        class SimpleDB {
-            $aboutVar = 'str'; 
-		}
 
-#### 函数命名
-使用__小驼峰法__命名，即第一个单词首字母小写，其余单词首字母均大写；
-		
-        public function __construct($downloadPath = '') {
+使用PDO连接数据库
 
-		}
+
+https://github.com/LongBo/BoboDB
+封装示例：
+<pre>
+$selector = [
+    'table' => [ 'tablename1 t1'],
+    'cols' => [ 'id', 'username'],
+    'join' => ['left', 'table2 t2'],
+    'on' => 't2.uid = t1.id',
+    'where' => 'id = :id', 
+    'order' => 'id desc', 
+    'group' => 'user', 
+    'limit' => '0, 20'
+    ];
+$result = $db->getAll($selector, [':id' => $id]);
+
+$inserter = [
+    'table' => 'table',
+    'cols' => [ 'id', 'username'],
+    'value' => [['id1', 'name1'],['id2', 'name2']]
+    ];
+$db->insert($insertor, [':id' => $id], $ignore = true);
+
+$replacer = [
+    'table' => 'table',
+    'cols' => [ 'id', 'username'],
+    'value' => [['id1', 'name1'],['id2', 'name2']]
+    ];
+$db->insert($replacer, [':id' => $id]);
+
+$updater = [
+    'table' => 'table',
+    'update' => [ 'id'=>':id', 'username' => ':username'],
+    'where' => 'id=:id',
+    ];
+$db->update($updater, [':id' => $id]);
+
+$deleter = [
+    'table' => 'table',
+    'where' => 'id=:id',
+    ];
+$db->delete($deleter, [':id' => $id]);
+</pre>
